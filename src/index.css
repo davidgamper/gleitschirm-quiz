@@ -570,13 +570,12 @@ div, section, span, p, a {
 	text-align: center;
 }
 .popup ul {
-	padding-left: 1.5rem;
 	margin: 4vmin auto 0 auto;
+	list-style: disc;
 }
 .popup li {
 	font-size: 2.5vmin;
 	line-height: 3vmin;
-	list-style: dot;
 }
 .popup .answers {
 	margin-top: 3vmin;
@@ -594,28 +593,28 @@ div, section, span, p, a {
 
 @media screen and (max-width: 800px) {
 	.quiz-wrap .question {
-		font-size: 1rem;
-		line-height: 1.3rem;
+		font-size: 0.9rem;
+		line-height: 1.15rem;
 	}
 	.quiz-context button {
-		font-size: 0.9rem;
-		line-height: 1.2rem;
+		font-size: 0.75rem;
+		line-height: 0.95rem;
 	}
 	.questionCount {
-		font-size: 1rem;
+		font-size: 0.75rem;
 	}
 	.score p {
-		font-size: 1rem;
+		font-size: 0.75rem;
 	}
 	.skipTo input, .skipTo button, .utility button, .popup button {
-		font-size: 0.65rem;
+		font-size: 0.75rem;
 	}
 	.popup .question {
-		font-size: 1.4rem;
-		line-height: 1.6rem;
+		font-size: 0.9rem;
+		line-height: 1.15rem;
 	}
 	.popup li {
-		font-size: 1rem;
+		font-size: 0.75rem;
 		line-height: 1.3rem;
 	}
 }
