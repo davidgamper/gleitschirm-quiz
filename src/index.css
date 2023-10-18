@@ -447,16 +447,13 @@ div, section, span, p, a {
 }
 
 .quiz {
-	height: 100vh;
 	width: 90vw;
 	max-width: 1680px;
 	margin: 0 auto;
 }
 .quiz-wrap {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
+	margin-top: 5vmin;
+	margin-bottom: 200px;
 	width: 100%;
 	z-index: 1;
 }
@@ -496,13 +493,14 @@ div, section, span, p, a {
 .utility {
 	width: 100%;
 	z-index: 2;
+	margin-top: 15px;
 }
 .utility button {
 	border: 1px solid #0B1522;
 	color: #0B1522;
 	text-align: center;
 	font-size: 2vmin;
-	border-radius: 30px;
+	border-radius: 1000px;
 	padding: 2vmin 4vmin;
 	font-family: 'Usual', sans-serif !important;
 	margin-top: 30px;
@@ -517,7 +515,7 @@ div, section, span, p, a {
 	color: #0B1522;
 	text-align: center;
 	font-size: 2vmin;
-	border-radius: 30px;
+	border-radius: 1000px;
 	padding: 2vmin 4vmin;
 	font-family: 'Usual', sans-serif !important;
 	margin-top: 30px;
@@ -528,13 +526,13 @@ div, section, span, p, a {
 	color: #0B1522;
 	text-align: center;
 	font-size: 2vmin;
-	border-radius: 30px;
+	border-radius: 1000px;
 	padding: 2vmin 4vmin;
 	font-family: 'Usual', sans-serif !important;
 	margin-top: 30px;
 }
 .popup {
-	position: absolute;
+	position: fixed;
 	left: 50%;
 	transform: translateX(-50%);
 	top: -100px;
@@ -550,7 +548,7 @@ div, section, span, p, a {
 	color: #0B1522;
 	text-align: center;
 	font-size: 2vmin;
-	border-radius: 30px;
+	border-radius: 1000px;
 	padding: 2vmin 4vmin;
 	font-family: 'Usual', sans-serif !important;
 	margin-top: 30px;
