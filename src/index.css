@@ -460,8 +460,8 @@ div, section, span, p, a {
 .quiz-wrap .question {
 	margin-bottom: 3vmin;
 	width: 100%;
-	font-size: 4vmin;
-	line-height: 5vmin;
+	font-size: 3.2vmin;
+	line-height: 4.2vmin;
 	text-align: center;
 }
 .quiz-context button {
@@ -470,9 +470,9 @@ div, section, span, p, a {
 	width: 100%;
 	text-align: center;
 	font-size: 2.5vmin;
-	line-height: 3vmin;
+	line-height: 3.5vmin;
 	border-radius: 1000px;
-	padding: 4vmin;
+	padding: 2.5vmin 4vmin;
 	font-family: 'Usual', sans-serif !important;
 	margin-top: 2vmin;
 	cursor: pointer;
@@ -559,8 +559,8 @@ div, section, span, p, a {
 .popup .question {
 	margin-bottom: 3vmin;
 	width: 100%;
-	font-size: 4vmin;
-	line-height: 5vmin;
+	font-size: 3.5vmin;
+	line-height: 4.5vmin;
 	text-align: center;
 }
 .popup ul {
