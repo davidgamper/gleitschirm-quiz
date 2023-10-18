@@ -429,7 +429,6 @@ body {
 	background-color: #fff;
 	width: inherit;
 	height: inherit;
-	overflow: hidden;
 }
 body, table, input, select, textarea, pre {
 	font-family: 'Usual', sans-serif;
@@ -452,7 +451,6 @@ div, section, span, p, a {
 	width: 90vw;
 	max-width: 1680px;
 	margin: 0 auto;
-	overflow: auto;
 }
 .quiz-wrap {
 	position: absolute;
