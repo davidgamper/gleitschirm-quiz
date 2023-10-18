@@ -536,6 +536,7 @@ div, section, span, p, a {
 	margin-top: 30px;
 }
 .popup {
+	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 	top: 0;
