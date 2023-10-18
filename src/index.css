@@ -503,7 +503,6 @@ div, section, span, p, a {
 	border-radius: 1000px;
 	padding: 2vmin 4vmin;
 	font-family: 'Usual', sans-serif !important;
-	margin-top: 30px;
 	cursor: pointer;
 }
 .skipTo {
