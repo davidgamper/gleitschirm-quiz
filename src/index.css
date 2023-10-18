@@ -453,7 +453,7 @@ div, section, span, p, a {
 }
 .quiz-wrap {
 	margin-top: 5vmin;
-	margin-bottom: 200px;
+	padding-bottom: 150px;
 	width: 100%;
 	z-index: 1;
 }
