@@ -452,6 +452,7 @@ div, section, span, p, a {
 	width: 90vw;
 	max-width: 1680px;
 	margin: 0 auto;
+	overflow: auto;
 }
 .quiz-wrap {
 	position: absolute;
@@ -476,7 +477,7 @@ div, section, span, p, a {
 	font-size: 2.5vmin;
 	line-height: 3vmin;
 	border-radius: 1000px;
-	padding: 2vmin 4vmin;
+	padding: 4vmin;
 	font-family: 'Usual', sans-serif !important;
 	margin-top: 2vmin;
 	cursor: pointer;
@@ -598,6 +599,7 @@ div, section, span, p, a {
 	.quiz-context button {
 		font-size: 0.75rem;
 		line-height: 0.95rem;
+		padding: 20px;
 	}
 	.questionCount {
 		font-size: 0.75rem;
