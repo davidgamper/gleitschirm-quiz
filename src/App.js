@@ -4231,6 +4231,10 @@ function App() {
 				<p>Richtig: {score}</p>
 				<p>Falsch: {wrongAnswers.length}</p>
 			</div>
+			<div className='utility flex space-between'>
+				<button onClick={handleResetQuiz}>Reset Quiz</button>
+				<button onClick={handleReanswerClick}>Falsche beantwortete Fragen</button>
+			</div>
 			<div className='quiz-wrap'>
 				<p className='questionCount'>Frage {currentIndex + 1}/{questions.length}</p>
 				{currentIndex < questions.length && (
@@ -4248,10 +4252,6 @@ function App() {
 					/>
 					<button onClick={handleSkipToQuestion}>Überspringen</button>
 				</div>
-			</div>
-			<div className='utility flex space-between'>
-				<button onClick={handleReanswerClick}>Falsche beantwortete Fragen</button>
-				<button onClick={handleResetQuiz}>Reset Quiz</button>
 			</div>
 			{showPopup && (
 			<Popup

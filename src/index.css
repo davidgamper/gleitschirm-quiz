@@ -457,7 +457,7 @@ div, section, span, p, a {
 	position: absolute;
 	top: 50%;
 	left: 0;
-	transform: translateY(-50%);
+	transform: translateY(-45%);
 	width: 100%;
 	z-index: 1;
 }
@@ -475,7 +475,7 @@ div, section, span, p, a {
 	text-align: center;
 	font-size: 2.5vmin;
 	line-height: 3vmin;
-	border-radius: 30px;
+	border-radius: 1000px;
 	padding: 2vmin 4vmin;
 	font-family: 'Usual', sans-serif !important;
 	margin-top: 2vmin;
@@ -489,13 +489,26 @@ div, section, span, p, a {
 
 }
 .score {
-	position: absolute;
-	left: 0;
-	top: 5vmin;
-	width: 100%;
+	margin-top: 5vmin
 }
 .score p {
 	font-size: 3vmin;
+}
+.utility {
+	width: 100%;
+	z-index: 2;
+}
+.utility button {
+	border: 1px solid #fff;
+	color: #fff;
+	text-align: center;
+	font-size: 2vmin;
+	border-radius: 30px;
+	padding: 2vmin 4vmin;
+	font-family: 'Usual', sans-serif !important;
+	margin-top: 30px;
+	cursor: pointer;
+	background: #0B1522;
 }
 .skipTo {
 	z-index: 2;
@@ -510,7 +523,7 @@ div, section, span, p, a {
 	padding: 2vmin 4vmin;
 	font-family: 'Usual', sans-serif !important;
 	margin-top: 30px;
-	margin-right: 20px;
+	margin-right: 1vmin;
 }
 .skipTo button {
 	border: 1px solid #fff;
@@ -521,24 +534,6 @@ div, section, span, p, a {
 	padding: 2vmin 4vmin;
 	font-family: 'Usual', sans-serif !important;
 	margin-top: 30px;
-}
-.utility {
-	position: absolute;
-	width: 100%;
-	bottom: 5vmin;
-	z-index: 2;
-}
-.utility button {
-	border: 1px solid #fff;
-	color: #fff;
-	text-align: center;
-	font-size: 2vmin;
-	border-radius: 30px;
-	padding: 2vmin 4vmin;
-	font-family: 'Usual', sans-serif !important;
-	margin-top: 30px;
-	cursor: pointer;
-	background: #0B1522;
 }
 .popup {
 	left: 50%;
