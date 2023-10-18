@@ -4233,7 +4233,7 @@ function App() {
 			</div>
 			<div className='utility flex space-between'>
 				<button onClick={handleResetQuiz}>Reset Quiz</button>
-				<button onClick={handleReanswerClick}>Falsche Fragen</button>
+				<button onClick={handleReanswerClick}>Falsche Antworten</button>
 			</div>
 			<div className='quiz-wrap'>
 				<p className='questionCount'>Frage {currentIndex + 1}/{questions.length}</p>
