@@ -522,7 +522,7 @@ div, section, span, p, a {
 	padding: 2vmin 4vmin;
 	font-family: 'Usual', sans-serif !important;
 	margin-top: 30px;
-	margin-right: 1vmin;
+	margin-right: 10px;
 }
 .skipTo button {
 	border: 1px solid #0B1522;
@@ -586,7 +586,7 @@ div, section, span, p, a {
 	margin: 8vmin auto 0 auto;
 }
 .popup button {
-	margin: 0 0.5vmin;
+	margin: 0 5px;
 }
 
 @media screen and (max-width: 800px) {
