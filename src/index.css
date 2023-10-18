@@ -422,11 +422,11 @@ body, html {
 	min-height: 100%;
 	font-size: 20px; /* Please modify Generic Font Size Responsive in last rows */
 	line-height: 1.5rem;
-	color: #fff;
+	color: #0B1522;
 }
 body {
 	position: relative;
-	background-color: #0B1522;
+	background-color: #fff;
 	width: inherit;
 	height: inherit;
 	overflow: hidden;
@@ -434,7 +434,7 @@ body {
 body, table, input, select, textarea, pre {
 	font-family: 'Usual', sans-serif;
 	font-weight: 400;
-	color: #fff;
+	color: #0B1522;
 }
 div, section, span, p, a {
 	position: relative;
@@ -469,8 +469,8 @@ div, section, span, p, a {
 	text-align: center;
 }
 .quiz-context button {
-	border: 2px solid #fff;
-	color: #fff;
+	border: 2px solid #0B1522;
+	color: #0B1522;
 	width: 100%;
 	text-align: center;
 	font-size: 2.5vmin;
@@ -499,8 +499,8 @@ div, section, span, p, a {
 	z-index: 2;
 }
 .utility button {
-	border: 1px solid #fff;
-	color: #fff;
+	border: 1px solid #0B1522;
+	color: #0B1522;
 	text-align: center;
 	font-size: 2vmin;
 	border-radius: 30px;
@@ -508,15 +508,14 @@ div, section, span, p, a {
 	font-family: 'Usual', sans-serif !important;
 	margin-top: 30px;
 	cursor: pointer;
-	background: #0B1522;
 }
 .skipTo {
 	z-index: 2;
 	margin: 2vmin auto 0 auto;
 }
 .skipTo input {
-	border: 1px solid #fff;
-	color: #fff;
+	border: 1px solid #0B1522;
+	color: #0B1522;
 	text-align: center;
 	font-size: 2vmin;
 	border-radius: 30px;
@@ -526,8 +525,8 @@ div, section, span, p, a {
 	margin-right: 1vmin;
 }
 .skipTo button {
-	border: 1px solid #fff;
-	color: #fff;
+	border: 1px solid #0B1522;
+	color: #0B1522;
 	text-align: center;
 	font-size: 2vmin;
 	border-radius: 30px;
@@ -543,13 +542,13 @@ div, section, span, p, a {
 	width: 100vw;
 	padding: 5vmin;
 	height: 100vh;
-	background: rgba(11, 21, 34, 0.95);
+	background: rgba(255, 255, 255, 0.95);
 	backdrop-filter: blur(2px);
 	z-index: 99;
 }
 .popup button {
-	border: 1px solid #fff;
-	color: #fff;
+	border: 1px solid #0B1522;
+	color: #0B1522;
 	text-align: center;
 	font-size: 2vmin;
 	border-radius: 30px;
@@ -557,7 +556,6 @@ div, section, span, p, a {
 	font-family: 'Usual', sans-serif !important;
 	margin-top: 30px;
 	cursor: pointer;
-	background: #0B1522;
 }
 .popup .correct-answer {
 	color: green;
