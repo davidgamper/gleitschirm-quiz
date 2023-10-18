@@ -1,13 +1,625 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ------------------------------------------------ START Generic START ------------------------------------------------ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+/* http://de.learnlayout.com/box-sizing.html */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+table, td, form {
+	margin: 0;
+	padding: 0;
+}
+section {
+	width: 100%;
+	display: block;
+}
+address {
+	font-style: normal;
+}
+h1, h2, h3, h4, h5, h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	letter-spacing: 0;
+	font-weight: normal;
+}
+a, button, select, div, input, textarea, article, span {
+	outline: none;
+	text-decoration: none;
+	background-color: transparent;
+	border: 0;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}
+a, button, select, div, input, textarea, article, span, ul ,li {
+	outline: none !important;
+	-webkit-tap-highlight-color: transparent;
+}
+img {
+	max-width: 100%;
+	border: 0;
+	vertical-align: middle;
+}
+video, svg {
+	vertical-align: middle;
+}
+picture,
+picture a {
+	display: block;
+}
+.owl-carousel {
+	display: block;
+}
+form fieldset select {
+	border-radius: 0;
+}
+/* remove styles */
+select, input, button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+button {
+	padding: 0;
+}
+select {
+	background-color: transparent;
+}
+/* remove the arrow from select element in ie11 */
+select::-ms-expand {
+	display: none;
+}
+/* remove the blue highlighting from select element in ie11 */
+select::-ms-value {
+	background: none;
+	color: #3C3C3C;
+}
+/* for bookingsuedtirol calendar select */
+.Bs-Select {
+	-webkit-appearance: menulist;
+	-moz-appearance: menulist;
+	-ms-appearance: menulist;
+	-o-appearance: menulist;
+	appearance: menulist;
+}
+.Bs-Select::-ms-expand {
+	display: block;
+}
+.Bs-Checkbox input {
+	width: 20px;
+	height: auto;
+}
+.Bs-Guest__Terms .Bs-Checkbox input {
+	position: relative;
+	width: 13px;
+	height: auto;
+	opacity: 1;
+}
+/* WebKit browsers */
+form input[type='text']:focus::-webkit-input-placeholder,
+form textarea:focus::-webkit-input-placeholder {
+	color: transparent;
+	opacity: 0;
+}
+/* Mozilla Firefox 4 to 18 */
+form input[type='text']:focus:-moz-placeholder,
+form textarea:focus:-moz-placeholder {
+	color: transparent;
+	opacity: 0;
+}
+/* Mozilla Firefox 19+ */
+form input[type='text']:focus::-moz-placeholder,
+form textarea:focus::-moz-placeholder {
+	color: transparent;
+	opacity: 0;
+}
+/* Internet Explorer 10+ */
+form input[type='text']:focus:-ms-input-placeholder,
+form textarea:focus:-ms-input-placeholder {
+	color: transparent;
+	opacity: 0;
+}
+.lightbox-item {
+	display: none;
+}
+.g-recaptcha {
+	width: 100%;
+	position: relative;
+	-webkit-transform-origin: left top;
+	transform-origin: left top;
+}
+/* SCROLLBAR */
+/* @media (min-width: 769px) {
+	*:not(.safari) {
+		scrollbar-width: thin;
+	}
+	*:not(.safari)::-webkit-scrollbar {
+		width: calc(8/1920*100vw);
+		min-width: 8px;
+	}
+	*:not(.safari)::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+	*:not(.safari)::-webkit-scrollbar-thumb {
+		border-radius: 8px;
+		background-color: transparent;
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		-ms-border-radius: 8px;
+		-o-border-radius: 8px;
+		-webkit-appearance: none;
+		-webkit-box-shadow: inset 0 0 0 10px;
+		box-shadow: inset 0 0 0 10px;
+	}
+} */
+/* ------------------------------------------------ END Generic END ------------------------------------------------ */
+
+/* ------------------------------------------------ START Presets START ------------------------------------------------ */
+object {
+	pointer-events: none;
+}
+.object-fit {
+	position: absolute;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+.coverImage {
+	height: 0;
+	position: relative;
+	overflow: hidden;
+}
+.coverImage picture {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.coverImage picture img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+.ttupper {
+	text-transform: uppercase !important;
+}
+.ttlower {
+	text-transform: lowercase !important;
+}
+.ttnone, .ttnone a, .ttnone span {
+	text-transform: none !important;
+}
+.flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+.flex-center {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+}
+.flex-column {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+}
+.flex-wrap {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-end {
+	justify-content: flex-end;
+}
+.space-between {
+	justify-content: space-between;
+}
+.space-around {
+	justify-content: space-around;
+}
+.align-start {
+	align-items: flex-start;
+}
+.align-center {
+	align-items: center;
+}
+.align-stretch {
+	align-items: stretch;
+}
+.align-end {
+	align-items: flex-end;
+}
+.block {
+	display: block;
+}
+.none {
+	display: none;
+}
+.tac {
+	text-align: center;
+}
+.tal {
+	text-align: left;
+}
+.tar {
+	text-align: right;
+}
+.noHover{
+	pointer-events: none;
+}
+.bold {
+	font-weight: 600 !important;
+}
+.italic {
+	font-style: italic !important;
+}
+/* ------------------------------------------------ END Presets END ------------------------------------------------ */
+
+/* --------------------------------------------- START Spacings START --------------------------------------------- */
+/*-------------- WIDTH --------------*/
+.width-100 {
+	width: 100%;
+}
+.width-50 {
+	width: 50%;
+}
+.width-25 {
+	width: 25%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*-------------- PADDINGS --------------*/
+/* for field 'space' in DCE - if no padding needed */
+.nopadding {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+/*-------------- MARGINS --------------*/
+.m-all-auto {
+	margin: auto;
+}
+.m-tb-auto {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.m-t-auto {
+	margin-top: auto;
+}
+.m-b-auto {
+	margin-bottom: auto;
+}
+.m-lr-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+.m-l-auto {
+	margin-left: auto;
+}
+.m-r-auto {
+	margin-right: auto;
+}
+/* for field 'space' in DCE - if no margin needed */
+.nomargin {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+/*--------------------------------------------- FONTS ---------------------------------------------*/
+
+@font-face {
+    font-family: 'Usual';
+    src: local('Usual Regular'),
+        url('./fonts/usual/Usual-Regular.woff2') format('woff2'),
+        url('./fonts/usual/Usual-Regular.woff') format('woff'),
+        url('./fonts/usual/Usual-Regular.ttf') format('truetype'),
+        url('./fonts/usual/Usual-Regular.svg#Usual') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Usual';
+    src: local('Usual Light'),
+        url('./fonts/usual/Usual-Light.woff2') format('woff2'),
+        url('./fonts/usual/Usual-Light.woff') format('woff'),
+        url('./fonts/usual/Usual-Light.ttf') format('truetype'),
+        url('./fonts/usual/Usual-Light.svg#Usual') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Usual';
+    src: local('Usual Bold'),
+        url('./fonts/usual/Usual-Bold.woff2') format('woff2'),
+        url('./fonts/usual/Usual-Bold.woff') format('woff'),
+        url('./fonts/usual/Usual-Bold.ttf') format('truetype'),
+        url('./fonts/usual/Usual-Bold.svg#Usual') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: block;
+} 
+
+@font-face {
+   font-family: 'NanumMyeongjo';
+    src: local('NanumMyeongjo Regular'),
+        url('./fonts/nanum-myeongjo/NanumMyeongjo.woff2') format('woff2'),
+        url('./fonts/nanum-myeongjo/NanumMyeongjo.woff') format('woff'),
+        url('./fonts/nanum-myeongjo/NanumMyeongjo.ttf') format('truetype'),
+        url('./fonts/nanum-myeongjo/NanumMyeongjo.svg#Usual') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+/* --------------------------------------------- START Defaults START --------------------------------------------- */
+
+body, html {
+	height: 100%;
+	min-height: 100%;
+	font-size: 20px; /* Please modify Generic Font Size Responsive in last rows */
+	line-height: 1.5rem;
+	color: #fff;
+}
+body {
+	position: relative;
+	background-color: #0B1522;
+	width: inherit;
+	height: inherit;
+	overflow: hidden;
+}
+body, table, input, select, textarea, pre {
+	font-family: 'Usual', sans-serif;
+	font-weight: 400;
+	color: #fff;
+}
+div, section, span, p, a {
+	position: relative;
+}
+.usual {
+	font-family: 'Usual', sans-serif !important;
+}
+.nanum, 
+.nanum span {
+	font-family: 'NanumMyeongjo', sans-serif !important;
+}
+
+.quiz {
+	height: 100vh;
+	width: 90vw;
+	max-width: 1680px;
+	margin: 0 auto;
+}
+.quiz-wrap {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 100%;
+	z-index: 1;
+}
+.quiz-wrap .question {
+	margin-bottom: 3vmin;
+	width: 100%;
+	font-size: 4vmin;
+	line-height: 5vmin;
+	text-align: center;
+}
+.quiz-context button {
+	border: 2px solid #fff;
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	font-size: 2.5vmin;
+	line-height: 3vmin;
+	border-radius: 30px;
+	padding: 2vmin 4vmin;
+	font-family: 'Usual', sans-serif !important;
+	margin-top: 2vmin;
+	cursor: pointer;
+}
+.questionCount {
+	text-align: center;
+	width: 100%;
+	margin-bottom: 4vmin;
+	font-size: 3vmin;
+
+}
+.score {
+	position: absolute;
+	left: 0;
+	top: 5vmin;
+	width: 100%;
+}
+.score p {
+	font-size: 3vmin;
+}
+.skipTo {
+	z-index: 2;
+	margin: 2vmin auto 0 auto;
+}
+.skipTo input {
+	border: 1px solid #fff;
+	color: #fff;
+	text-align: center;
+	font-size: 2vmin;
+	border-radius: 30px;
+	padding: 2vmin 4vmin;
+	font-family: 'Usual', sans-serif !important;
+	margin-top: 30px;
+	margin-right: 20px;
+}
+.skipTo button {
+	border: 1px solid #fff;
+	color: #fff;
+	text-align: center;
+	font-size: 2vmin;
+	border-radius: 30px;
+	padding: 2vmin 4vmin;
+	font-family: 'Usual', sans-serif !important;
+	margin-top: 30px;
+}
+.utility {
+	position: absolute;
+	width: 100%;
+	bottom: 5vmin;
+	z-index: 2;
+}
+.utility button {
+	border: 1px solid #fff;
+	color: #fff;
+	text-align: center;
+	font-size: 2vmin;
+	border-radius: 30px;
+	padding: 2vmin 4vmin;
+	font-family: 'Usual', sans-serif !important;
+	margin-top: 30px;
+	cursor: pointer;
+	background: #0B1522;
+}
+.popup {
+	left: 50%;
+	transform: translateX(-50%);
+	top: 0;
+	width: 100vw;
+	padding: 5vmin;
+	height: 100vh;
+	background: rgba(11, 21, 34, 0.95);
+	backdrop-filter: blur(2px);
+	z-index: 99;
+}
+.popup button {
+	border: 1px solid #fff;
+	color: #fff;
+	text-align: center;
+	font-size: 2vmin;
+	border-radius: 30px;
+	padding: 2vmin 4vmin;
+	font-family: 'Usual', sans-serif !important;
+	margin-top: 30px;
+	cursor: pointer;
+	background: #0B1522;
+}
+.popup .correct-answer {
+	color: green;
+}
+.popup .question {
+	margin-bottom: 3vmin;
+	width: 100%;
+	font-size: 4vmin;
+	line-height: 5vmin;
+	text-align: center;
+}
+.popup ul {
+	padding-left: 1.5rem;
+	margin: 4vmin auto 0 auto;
+}
+.popup li {
+	font-size: 2.5vmin;
+	line-height: 3vmin;
+	list-style: dot;
+}
+.popup .answers {
+	margin-top: 3vmin;
+	font-weight: bold;
+}
+.popup li {
+	margin-top: 1vmin;
+}
+.popup .buttons {
+	margin: 8vmin auto 0 auto;
+}
+.popup button {
+	margin: 0 0.5vmin;
+}
+
+@media screen and (max-width: 800px) {
+	.quiz-wrap .question {
+		font-size: 1rem;
+		line-height: 1.3rem;
+	}
+	.quiz-context button {
+		font-size: 0.9rem;
+		line-height: 1.2rem;
+	}
+	.questionCount {
+		font-size: 1rem;
+	}
+	.score p {
+		font-size: 1rem;
+	}
+	.skipTo input, .skipTo button, .utility button, .popup button {
+		font-size: 0.65rem;
+	}
+	.popup .question {
+		font-size: 1.4rem;
+		line-height: 1.6rem;
+	}
+	.popup li {
+		font-size: 1rem;
+		line-height: 1.3rem;
+	}
 }
