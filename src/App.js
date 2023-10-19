@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
 	const initialQuestions = [
@@ -4226,71 +4227,74 @@ function App() {
 	};
 
 	return (
-		<div className='quiz'>
-			<div className='score flex space-between'>
-				<p>Richtig: {score}</p>
-				<p>Falsch: {wrongAnswers.length}</p>
-			</div>
-			<div className='utility flex space-between'>
-				<button onClick={handleResetQuiz}>Reset Quiz</button>
-				<button onClick={handleReanswerClick}>Falsche Antworten</button>
-			</div>
-			<div className='quiz-wrap'>
-				<p className='questionCount'>Frage {currentIndex + 1}/{questions.length}</p>
-				{currentIndex < questions.length && (
-				<Question
-					question={questions[currentIndex]}
-					handleAnswerClick={handleAnswerClick}
+		<>
+			<Analytics />
+			<div className='quiz'>
+				<div className='score flex space-between'>
+					<p>Richtig: {score}</p>
+					<p>Falsch: {wrongAnswers.length}</p>
+				</div>
+				<div className='utility flex space-between'>
+					<button onClick={handleResetQuiz}>Reset Quiz</button>
+					<button onClick={handleReanswerClick}>Falsche Antworten</button>
+				</div>
+				<div className='quiz-wrap'>
+					<p className='questionCount'>Frage {currentIndex + 1}/{questions.length}</p>
+					{currentIndex < questions.length && (
+					<Question
+						question={questions[currentIndex]}
+						handleAnswerClick={handleAnswerClick}
+					/>
+					)}
+					<div className='skipTo flex-center'>
+						<input
+							type="number"
+							placeholder="Springe zu Frage Nr."
+							value={skipToQuestion}
+							onChange={(e) => setSkipToQuestion(parseInt(e.target.value))}
+						/>
+						<button onClick={handleSkipToQuestion}>Überspringen</button>
+					</div>
+				</div>
+				{showPopup && (
+				<Popup
+					question={wrongAnswers[popupIndex]}
+					onClose={handlePopupClose}
+					onNext={handleNextPopup}
+					onPrev={handlePrevPopup}
 				/>
 				)}
-				<div className='skipTo flex-center'>
-					<input
-						type="number"
-						placeholder="Springe zu Frage Nr."
-						value={skipToQuestion}
-						onChange={(e) => setSkipToQuestion(parseInt(e.target.value))}
-					/>
-					<button onClick={handleSkipToQuestion}>Überspringen</button>
-				</div>
 			</div>
-			{showPopup && (
-			<Popup
-				question={wrongAnswers[popupIndex]}
-				onClose={handlePopupClose}
-				onNext={handleNextPopup}
-				onPrev={handlePrevPopup}
-			/>
-			)}
-		</div>
+			</>
 	)
 
-	function Popup({ question, onClose, onNext, onPrev }) {
-		const correctAnswer = question.answers.find((answer) => answer.correct);
-		return (
-		  <div className="popup flex-center align-center">
-			<div className="popup-content flex-column">
-			  <p className='question'>{question.question}</p>
-			  <ul>
-				  {question.answers.map((answer, index) => {
-				  return(<li
-					key={index}
-					className={answer.correct ? 'correct-answer' : ''}
-				  >
-					{answer.text}
-				  </li>)
-				})}
-			  </ul>
-			  <div className='buttons flex'>
+		function Popup({ question, onClose, onNext, onPrev }) {
+			const correctAnswer = question.answers.find((answer) => answer.correct);
+			return (
+			<div className="popup flex-center align-center">
+				<div className="popup-content flex-column">
+				<p className='question'>{question.question}</p>
+				<ul>
+					{question.answers.map((answer, index) => {
+					return(<li
+						key={index}
+						className={answer.correct ? 'correct-answer' : ''}
+					>
+						{answer.text}
+					</li>)
+					})}
+				</ul>
+				<div className='buttons flex'>
 
-			  <button onClick={onPrev} disabled={popupIndex === 0}>Vorherige</button>
-			  <button onClick={onNext} disabled={popupIndex === wrongAnswers.length - 1}>Nächste</button>
-			  <button onClick={onClose}>Schließen</button>
-			  </div>
+				<button onClick={onPrev} disabled={popupIndex === 0}>Vorherige</button>
+				<button onClick={onNext} disabled={popupIndex === wrongAnswers.length - 1}>Nächste</button>
+				<button onClick={onClose}>Schließen</button>
+				</div>
 
+				</div>
 			</div>
-		  </div>
 		);
-	  }
+	}
 }
 
 function Question({ question, handleAnswerClick }) {
