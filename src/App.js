@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Analytics } from '@vercel/analytics/react';
 
 function App() {
 	const initialQuestions = [
@@ -4227,8 +4226,6 @@ function App() {
 	};
 
 	return (
-		<>
-			<Analytics />
 			<div className='quiz'>
 				<div className='score flex space-between'>
 					<p>Richtig: {score}</p>
@@ -4265,12 +4262,11 @@ function App() {
 				/>
 				)}
 			</div>
-			</>
 	)
 
-		function Popup({ question, onClose, onNext, onPrev }) {
-			const correctAnswer = question.answers.find((answer) => answer.correct);
-			return (
+	function Popup({ question, onClose, onNext, onPrev }) {
+		const correctAnswer = question.answers.find((answer) => answer.correct);
+		return (
 			<div className="popup flex-center align-center">
 				<div className="popup-content flex-column">
 				<p className='question'>{question.question}</p>
