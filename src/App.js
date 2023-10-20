@@ -4265,32 +4265,43 @@ function App() {
 	)
 
 	function Popup({ question, onClose, onNext, onPrev }) {
+		const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
+	  
 		const correctAnswer = question.answers.find((answer) => answer.correct);
+	  
+		const toggleCorrectAnswer = () => {
+		  setShowCorrectAnswer(!showCorrectAnswer);
+		};
+	  
 		return (
-			<div className="popup flex-center align-center">
-				<div className="popup-content flex-column">
-				<p className='question'>{question.question}</p>
-				<ul>
-					{question.answers.map((answer, index) => {
-					return(<li
-						key={index}
-						className={answer.correct ? 'correct-answer' : ''}
+		  <div className="popup flex-center align-center">
+			<div className="popup-content flex-column">
+			  <p className='question'>{question.question}</p>
+			  <ul>
+				{question.answers.map((answer, index) => {
+				  return (
+					<li
+					  key={index}
+					  className={showCorrectAnswer && answer.correct ? 'correct-answer' : ''}
 					>
-						{answer.text}
-					</li>)
-					})}
-				</ul>
-				<div className='buttons flex'>
-
+					  {answer.text}
+					</li>
+				  );
+				})}
+			  </ul>
+			  <div className='buttons flex-wrap justify-center'>
 				<button onClick={onPrev} disabled={popupIndex === 0}>Vorherige</button>
 				<button onClick={onNext} disabled={popupIndex === wrongAnswers.length - 1}>Nächste</button>
 				<button onClick={onClose}>Schließen</button>
-				</div>
-
-				</div>
+				<button className='block' onClick={toggleCorrectAnswer}>
+				  {showCorrectAnswer ? 'Verstecke Korrekte Antwort' : 'Zeige Korrekte Antwort'}
+				</button>
+			  </div>
 			</div>
+		  </div>
 		);
-	}
+	  }
+	  
 }
 
 function Question({ question, handleAnswerClick }) {
